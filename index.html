@@ -21,45 +21,8 @@ main{max-width:1000px;margin:0 auto;padding:0 22px}
 .bars i{transform-origin:bottom}
 .hero>*:not(.bars){position:relative;z-index:1}
 .tag{display:inline-block;padding:5px 14px;border:1px solid var(--line);border-radius:99px;color:var(--a);font-size:.85rem;width:fit-content;background:rgba(110,231,183,.07)}
-h1{font-size:clamp(2.8rem,8vw,5.2rem);margin:18px 0 6px;line-height:1.05;background:linear-gradient(120deg,#fff,var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:shine 6s linear infinite}
-@keyframes shine{to{background-position:200% center}}
-.role{font-size:clamp(1.1rem,3vw,1.6rem);color:var(--mute);min-height:2em}
-.caret{display:inline-block;width:2px;height:1.1em;background:var(--a);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
-.lead{max-width:560px;color:var(--mute)}
-.btns{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
-.btn{padding:11px 22px;border-radius:10px;font-weight:600;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-3px);text-decoration:none}
-.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#06101f;box-shadow:0 8px 24px rgba(96,165,250,.25)}
-.btn.s{border:1px solid var(--line);color:var(--text)}
-h2{font-size:1.8rem;margin:80px 0 24px}
-h2 span{color:var(--a);font-size:.9rem;display:block;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;transition:transform .3s,border-color .3s,box-shadow .3s}
-.card:hover{transform:translateY(-4px);border-color:#34406a;box-shadow:0 18px 40px rgba(0,0,0,.35)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:22px 0}
-.stat{background:#0f1730;border:1px solid var(--line);border-radius:14px;padding:18px}
-.stat small{color:var(--mute)}.stat strong{display:block;font-size:1.9rem;color:var(--a)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-@media(max-width:760px){.split{grid-template-columns:1fr}.bars{display:none}nav div a{margin-left:12px}}
-.ring{display:flex;align-items:center;gap:18px}
-.ring svg{transform:rotate(-90deg);flex:none}
-.ring circle{fill:none;stroke-width:10;stroke-linecap:round}
-.ring .fg{transition:stroke-dashoffset 1.8s cubic-bezier(.2,.8,.2,1)}
-h3{margin:0 0 8px;font-size:1.3rem}h4{margin:18px 0 8px;color:var(--mute);font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase}
-ul.ins{list-style:none;padding:0;margin:0}
-ul.ins li{padding:9px 0 9px 28px;position:relative;border-bottom:1px dashed var(--line);opacity:0;transform:translateX(-14px);transition:all .5s ease}
-ul.ins.in li{opacity:1;transform:none}
-ul.ins li:before{content:"";position:absolute;left:4px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--a);box-shadow:0 0 0 4px rgba(110,231,183,.15)}
-.pills{display:flex;flex-wrap:wrap;gap:10px}
-.pill{padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:.92rem;opacity:0;transform:scale(.85);transition:all .45s cubic-bezier(.3,1.5,.5,1)}
-.pill:hover{border-color:var(--b);color:var(--b)}
-.pills.in .pill{opacity:1;transform:none}
-.tools{margin-top:18px;color:var(--mute);font-size:.9rem}
-.tools b{color:var(--b)}
-footer{text-align:center;color:var(--mute);padding:60px 0 40px;font-size:.9rem}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.pill,ul.ins li{opacity:1;transform:none}}
+h1{font-size:clamp(2.8rem,8vw,5.2rem);margin:18px 0 6px;line-height:1.05;background:linear-gradient(120deg,#fff,var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.06em}.role{font-size:clamp(1.1rem,3vw,1.6rem);color:var(--mute);min-height:2em}.caret{display:inline-block;width:2px;height:1.1em;background:var(--a);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(2) infinite}@keyframes blink{50%{opacity:0}}.lead{max-width:560px;color:var(--mute)}.btns{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}.btn{padding:11px 22px;border-radius:10px;font-weight:600;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);text-decoration:none}.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#06101f;box-shadow:0 8px 24px rgba(96,165,250,.25)}.btn.s{border:1px solid var(--line);color:var(--text)}
+h2{font-size:1.8rem;margin:80px 0 24px}h2 span{color:var(--a);font-size:.9rem;display:block;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;transition:transform .3s,border-color .3s,box-shadow .3s}.card:hover{transform:translateY(-4px);border-color:#34406a;box-shadow:0 18px 40px rgba(0,0,0,.35)}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:22px 0}.stat{background:#0f1730;border:1px solid var(--line);border-radius:14px;padding:18px}.stat small{color:var(--mute)}.stat strong{display:block;font-size:1.9rem;color:var(--a)}.split{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:760px){.split{grid-template-columns:1fr}.bars{display:none}nav div a{margin-left:12px}}.ring{display:flex;align-items:center;gap:18px}.ring svg{transform:rotate(-90deg);flex:none}.ring circle{fill:none;stroke-width:10;stroke-linecap:round}.ring .fg{transition:stroke-dashoffset 1.8s cubic-bezier(.2,.8,.2,1)}h3{margin:0 0 8px;font-size:1.3rem}h4{margin:18px 0 8px;color:var(--mute);font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase}ul.ins{list-style:none;padding:0;margin:0}ul.ins li{padding:9px 0 9px 28px;position:relative;border-bottom:1px dashed var(--line);opacity:0;transform:translateX(-14px);transition:all .5s ease}ul.ins.in li{opacity:1;transform:none}ul.ins li:before{content:"";position:absolute;left:4px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--a);box-shadow:0 0 0 4px rgba(110,231,183,.15)}.pills{display:flex;flex-wrap:wrap;gap:10px}.pill{padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:.92rem;opacity:0;transform:scale(.85);transition:all .45s cubic-bezier(.3,1.5,.8,1)}.pill:hover{border-color:var(--b);color:var(--b)}.pills.in .pill{opacity:1;transform:none}.tools{margin-top:18px;color:var(--mute);font-size:.9rem}.tools b{color:var(--b)}footer{text-align:center;color:var(--mute);padding:60px 0 40px;font-size:.9rem}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.pill,ul.ins li{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -202,7 +165,7 @@ function App() {
       h("section", { id: "project" },
         h(Reveal, null, h("h2", null, h("span", null, "Featured Project"), "E-Commerce Sales Analysis")),
         h(Reveal, null, h("div", { className: "card" },
-          h("p", { style: { color: "#9aa6c6", marginTop: 0 } }, "End-to-end analysis of ", h("b", { style: { color: "#e8ecf8" } }, h(CountUp, { to: 138000, suffix: "+" })), " e-commerce transactions to understand revenue drivers, customer behavior, and profitability."),
+          h("p", { style: { color: "#9aa6c6", marginTop: 0 } }, "End-to-end analysis of ", h("b", { style: { color: "#e8ecf8" } }, h(CountUp, { to: 138000, suffix: "+" })), " e-commerce transactions across multiple categories and regions.",
           h("div", { className: "stats" },
             h("div", { className: "stat" }, h("small", null, "Total Revenue"), h("strong", null, h(CountUp, { to: 177.13, decimals: 2, prefix: "₹", suffix: " Cr" }))),
             h("div", { className: "stat" }, h("small", null, "Total Profit"), h("strong", null, h(CountUp, { to: 76.15, decimals: 2, prefix: "₹", suffix: " Cr" }))),
@@ -210,7 +173,7 @@ function App() {
           h("div", { className: "split" },
             h("div", null, h("h4", null, "Key Results"), h(Insights, { items: results })),
             h("div", null, h("h4", null, "Business Recommendations"), h(Insights, { items: recs }))),
-          h("p", { className: "tools" }, h("b", null, "Tools used: "), "SQL (PostgreSQL) · Python (Pandas) · Power BI")))),
+          h("p", { className: "tools" }, h("b", null, "Tools used: "), "SQL (PostgreSQL) · Python (Pandas) · Power BI"))))),
 
       h("section", null,
         h(Reveal, null, h("h2", null, h("span", null, "More Work"), "Other Projects")),
