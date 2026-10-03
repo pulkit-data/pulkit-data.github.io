@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pulkit | Data Analyst Portfolio</title>
+<title>Pulkit Chauhan | Data Analyst Portfolio</title>
 <style>
 :root{--bg:#0b1020;--card:#131a30;--line:#222c4a;--text:#e8ecf8;--mute:#9aa6c6;--a:#6ee7b7;--b:#60a5fa;--c:#a78bfa}
 *{box-sizing:border-box}
@@ -16,23 +16,60 @@ nav b{letter-spacing:.5px}nav div a{color:var(--mute);margin-left:22px;font-size
 main{max-width:1000px;margin:0 auto;padding:0 22px}
 .hero{position:relative;padding:90px 0 70px;min-height:70vh;display:flex;flex-direction:column;justify-content:center}
 .bars{position:absolute;right:0;bottom:30px;display:flex;align-items:flex-end;gap:8px;height:180px;opacity:.55;z-index:0}
-.bars i{width:14px;border-radius:6px 6px 0 0;background:linear-gradient(var(--b),var(--c));animation:bar 3.2s ease-in-out infinite alternate}
+.bars i{width:14px;border-radius:6px 6px 0 0;background:linear-gradient(var(--b),var(--c));transform-origin:bottom;animation:bar 3.2s ease-in-out infinite alternate}
 @keyframes bar{from{transform:scaleY(.35)}to{transform:scaleY(1)}}
-.bars i{transform-origin:bottom}
 .hero>*:not(.bars){position:relative;z-index:1}
 .tag{display:inline-block;padding:5px 14px;border:1px solid var(--line);border-radius:99px;color:var(--a);font-size:.85rem;width:fit-content;background:rgba(110,231,183,.07)}
-h1{font-size:clamp(2.8rem,8vw,5.2rem);margin:18px 0 6px;line-height:1.05;background:linear-gradient(120deg,#fff,var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}.role{font-size:clamp(1.1rem,2vw,2rem);margin:0 0 18px;color:var(--text)}.caret{display:inline-block;width:2px;height:1.1em;vertical-align:-.15em;margin-left:4px;background:var(--a);animation:blink .9s steps(1) infinite}@keyframes blink{50%{opacity:0}}
-.lead{font-size:1.1rem;color:var(--mute);max-width:630px;margin:0 0 30px}.btns{display:flex;flex-wrap:wrap;gap:16px}.btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:600;border:1px solid var(--line);transition:.2s ease}.btn:hover{text-decoration:none;transform:translateY(-1px)}.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#08111d}.btn.s{background:rgba(255,255,255,.02);color:var(--text)}
-section{padding:48px 0}.card{background:linear-gradient(180deg,rgba(19,26,48,.92),rgba(19,26,48,.82));border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 20px 40px rgba(0,0,0,.18)}
-.card p{color:var(--text)}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px}.stat{padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}.stat small{display:block;color:var(--mute);margin-bottom:6px}.stat strong{font-size:1.7rem;color:var(--text)}
-.split{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:24px}.split h4{margin:0 0 12px;font-size:1.05rem}.ins{list-style:none;padding:0;margin:0}.ins li{position:relative;padding-left:18px;color:var(--mute);margin-top:10px}.ins li:before{content:"•";position:absolute;left:0;top:0;color:var(--a)}
-.tools{margin-top:22px;color:var(--mute)}
-.ring{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}.ring svg{transform:rotate(-90deg)}.fg{fill:none;stroke-width:7;stroke-linecap:round;transition:stroke-dashoffset .8s ease}
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}.reveal.in{opacity:1;transform:translateY(0)}
-h2{font-size:1.8rem;margin:80px 0 24px}h2 span{color:var(--a);font-size:.9rem;display:block;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}.h3{margin:0 0 12px}.pills{display:flex;flex-wrap:wrap;gap:12px;opacity:0;transform:translateY(18px);transition:all .7s ease}.pills.in{opacity:1;transform:translateY(0)}.pill{display:inline-flex;border:1px solid var(--line);background:rgba(96,165,250,.06);color:var(--text);padding:8px 12px;border-radius:999px;font-size:.94rem}
+h1{font-size:clamp(2.8rem,8vw,5.2rem);margin:18px 0 6px;line-height:1.05;background:linear-gradient(120deg,#fff,var(--b) 50%,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(1.1rem,2vw,2rem);margin:0 0 18px}
+.caret{display:inline-block;width:2px;height:1.1em;vertical-align:-.15em;margin-left:4px;background:var(--a);animation:blink .9s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{font-size:1.1rem;color:var(--mute);max-width:630px;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:600;border:1px solid var(--line);transition:.2s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#08111d}
+.btn.s{background:rgba(255,255,255,.02);color:var(--text)}
+section{padding:48px 0}
+h2{font-size:1.8rem;margin:80px 0 24px}
+h2 span{color:var(--a);font-size:.9rem;display:block;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.card{display:block;position:relative;color:var(--text);background:linear-gradient(180deg,rgba(19,26,48,.92),rgba(19,26,48,.82));border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 20px 40px rgba(0,0,0,.18);overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+a.card:hover{text-decoration:none;transform:translateY(-5px);border-color:var(--b);box-shadow:0 24px 50px rgba(96,165,250,.18)}
+a.card:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+a.card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(96,165,250,.16),transparent 70%)}
+a.card:hover::before{opacity:1}
+.card h3{margin:0 0 8px;font-size:1.3rem}
+.card p{margin:0;color:var(--mute)}
+.stack{display:grid;gap:22px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px}
+.stats.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stat{padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+.stat small{display:block;color:var(--mute);margin-bottom:6px}
+.stat strong{font-size:1.7rem}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;margin-top:24px}
+.split h4{margin:0 0 12px;font-size:1.05rem}
+.ins{list-style:none;padding:0;margin:0}
+.ins li{position:relative;padding-left:18px;color:var(--mute);margin-top:10px;opacity:0;transform:translateX(-14px);transition:all .6s ease}
+.ins.in li{opacity:1;transform:none}
+.ins li:before{content:"\2022";position:absolute;left:0;top:0;color:var(--a)}
+.tools{margin-top:22px;color:var(--mute);font-size:.95rem}
+.tools b{color:var(--text)}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:var(--b)}
+.cta svg{transition:transform .25s}
+a.card:hover .cta svg{transform:translate(4px,-4px)}
+.ring{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
+.ring svg{transform:rotate(-90deg)}
+.fg{fill:none;stroke-width:7;stroke-linecap:round;transition:stroke-dashoffset 1.2s ease}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+.pills{display:flex;flex-wrap:wrap;gap:12px}
+.pill{display:inline-flex;border:1px solid var(--line);background:rgba(96,165,250,.06);padding:8px 12px;border-radius:999px;font-size:.94rem;opacity:0;transform:translateY(18px);transition:all .6s ease}
+.pills.in .pill{opacity:1;transform:none}
+.pill:hover{border-color:var(--a)}
+.contact p{margin:0 0 8px;color:var(--text)}
 footer{padding:30px 0 60px;color:var(--mute);text-align:center}
-@media (max-width:700px){.stats,.split{grid-template-columns:1fr}.nav{padding:14px 18px}.nav div a{margin-left:14px}.hero{padding-top:72px}.card{padding:20px}.}
+@media (max-width:700px){.stats,.stats.two,.split{grid-template-columns:1fr}nav{padding:14px 18px}nav div a{margin-left:14px}.hero{padding-top:72px}.card{padding:20px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.pill,.ins li{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -43,14 +80,19 @@ footer{padding:30px 0 60px;color:var(--mute);text-align:center}
 const h = React.createElement;
 const { useState, useEffect, useRef } = React;
 
-function useInView(once = true) {
+// Replace with the direct Nike repo link when you have it.
+const NIKE_URL = "https://github.com/pulkit-data";
+const ECOM_URL = "https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI";
+const HR_URL = "https://github.com/pulkit-data/HR-Employee-Attrition-Analysis";
+
+function useInView() {
   const ref = useRef(null);
   const [seen, setSeen] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (!el || !("IntersectionObserver" in window)) { setSeen(true); return; }
     const io = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) { setSeen(true); if (once) io.disconnect(); }
+      if (e.isIntersecting) { setSeen(true); io.disconnect(); }
     }, { threshold: 0.2 });
     io.observe(el);
     return () => io.disconnect();
@@ -58,9 +100,9 @@ function useInView(once = true) {
   return [ref, seen];
 }
 
-function Reveal({ children, delay = 0, className = "" }) {
+function Reveal({ children, delay = 0 }) {
   const [ref, seen] = useInView();
-  return h("div", { ref, className: "reveal " + (seen ? "in " : "") + className, style: { transitionDelay: delay + "ms" } }, children);
+  return h("div", { ref, className: "reveal" + (seen ? " in" : ""), style: { transitionDelay: delay + "ms" } }, children);
 }
 
 function CountUp({ to, decimals = 0, prefix = "", suffix = "", duration = 1800 }) {
@@ -101,28 +143,29 @@ function Typing({ words }) {
   return h("div", { className: "role" }, "I work with ", h("span", { style: { color: "#6ee7b7" } }, words[i].slice(0, n)), h("span", { className: "caret" }));
 }
 
-function Ring({ value }) {
+function Ring({ value, label }) {
   const [ref, seen] = useInView();
   const r = 52, c = 2 * Math.PI * r;
   return h("div", { className: "ring", ref },
     h("svg", { width: 130, height: 130, viewBox: "0 0 130 130" },
       h("defs", null, h("linearGradient", { id: "g", x1: "0", y1: "0", x2: "1", y2: "1" },
         h("stop", { offset: "0", stopColor: "#6ee7b7" }), h("stop", { offset: "1", stopColor: "#60a5fa" }))),
-      h("circle", { cx: 65, cy: 65, r, stroke: "#222c4a" }),
+      h("circle", { cx: 65, cy: 65, r, fill: "none", stroke: "#222c4a", strokeWidth: 7 }),
       h("circle", { className: "fg", cx: 65, cy: 65, r, stroke: "url(#g)", strokeDasharray: c, strokeDashoffset: seen ? c * (1 - value / 100) : c })),
-    h("div", null, h("strong", { style: { fontSize: "2rem", color: "#6ee7b7" } }, h(CountUp, { to: value, decimals: 2, suffix: "%" })),
-      h("div", { style: { color: "#9aa6c6", fontSize: ".9rem" } }, "Average profit margin")));
+    h("div", { style: { textAlign: "center" } },
+      h("strong", { style: { fontSize: "1.8rem", color: "#6ee7b7" } }, h(CountUp, { to: value, decimals: 2, suffix: "%" })),
+      h("div", { style: { color: "#9aa6c6", fontSize: ".9rem" } }, label)));
 }
 
-function Insights({ items }) {
+function List({ items }) {
   const [ref, seen] = useInView();
-  return h("ul", { className: "ins " + (seen ? "in" : ""), ref },
+  return h("ul", { className: "ins" + (seen ? " in" : ""), ref },
     items.map((t, i) => h("li", { key: i, style: { transitionDelay: i * 90 + "ms" } }, t)));
 }
 
 function Pills({ items }) {
   const [ref, seen] = useInView();
-  return h("div", { className: "pills " + (seen ? "in" : ""), ref },
+  return h("div", { className: "pills" + (seen ? " in" : ""), ref },
     items.map((t, i) => h("span", { key: t, className: "pill", style: { transitionDelay: i * 70 + "ms" } }, t)));
 }
 
@@ -139,27 +182,48 @@ function ScrollBar() {
   return h("div", { className: "progress", ref });
 }
 
+const Arrow = () => h("svg", { width: 16, height: 16, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2.4, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true" },
+  h("path", { d: "M7 17L17 7" }), h("path", { d: "M8 7h9v9" }));
+
+// Whole card is one link, so a click anywhere opens the repo.
+function ProjectCard({ href, title, label, children }) {
+  const ref = useRef(null);
+  const onMove = (e) => {
+    const r = ref.current.getBoundingClientRect();
+    ref.current.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    ref.current.style.setProperty("--my", (e.clientY - r.top) + "px");
+  };
+  return h("a", { ref, className: "card", href, target: "_blank", rel: "noopener noreferrer", onMouseMove: onMove, "aria-label": title + ", opens on GitHub" },
+    children, h("span", { className: "cta" }, label || "View on GitHub", h(Arrow)));
+}
+
 const results = [
   "South region and Consumer segment drove the highest revenue",
   "Mobile App was the top sales channel",
   "Organic Search performed best among marketing channels",
   "Almost all revenue came from Repeat customers",
-  "High discounts significantly reduced profit margins",
+  "High discounts significantly reduced profit margins"
 ];
 const recs = [
   "Focus on new customer acquisition",
-  "Invest more in Mobile App & Website",
+  "Invest more in Mobile App and Website",
   "Scale Organic Search and Google Ads",
-  "Optimize discount strategy to protect margins",
+  "Optimise discount strategy to protect margins"
 ];
-const skills = ["SQL", "Python (Pandas)", "Excel", "Power BI", "Tableau", "Data Cleaning", "Exploratory Data Analysis", "Business Insights", "Data Visualization"];
+const drivers = [
+  "Overtime was a major driver",
+  "Younger employees left more often",
+  "Low salary and short tenure raised attrition",
+  "Sales Representatives had the highest attrition, at nearly 40%"
+];
+const skills = ["SQL", "Python (Pandas)", "Excel", "Power BI", "Tableau", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization"];
 const heights = [40, 65, 50, 85, 60, 100, 75, 90, 55, 70];
 
 function App() {
   return h(React.Fragment, null,
     h(ScrollBar),
     h("nav", null, h("b", null, "Pulkit"),
-      h("div", null, h("a", { href: "#project" }, "Project"), h("a", { href: "#skills" }, "Skills"), h("a", { href: "#contact" }, "Contact"))),
+      h("div", null, h("a", { href: "#projects" }, "Projects"), h("a", { href: "#skills" }, "Skills"), h("a", { href: "#contact" }, "Contact"))),
     h("main", null,
       h("section", { className: "hero" },
         h("div", { className: "bars", "aria-hidden": "true" },
@@ -167,30 +231,40 @@ function App() {
         h("span", { className: "tag" }, "Aspiring Data Analyst"),
         h("h1", null, "Pulkit"),
         h(Typing, { words: ["SQL", "Python", "Power BI", "Tableau", "Excel"] }),
-        h("p", { className: "lead" }, "I turn raw data into clear business insights using SQL, Python, Excel, Power BI, and Tableau."),
+        h("p", { className: "lead" }, "MBA in Finance and Marketing, now building analytics projects with SQL, Python, Excel, Power BI and Tableau."),
         h("div", { className: "btns" },
-          h("a", { className: "btn p", href: "#project" }, "View my work"),
-          h("a", { className: "btn s", href: "https://github.com/pulkit-data", target: "_blank", rel: "noopener" }, "GitHub"))),
+          h("a", { className: "btn p", href: "#projects" }, "View my work"),
+          h("a", { className: "btn s", href: "https://github.com/pulkit-data", target: "_blank", rel: "noopener noreferrer" }, "GitHub"))),
 
-      h("section", { id: "project" },
-        h(Reveal, null, h("h2", null, h("span", null, "Featured Project"), "E-Commerce Sales Analysis")),
-        h(Reveal, null, h("div", { className: "card" },
-          h("p", { style: { color: "#9aa6c6", marginTop: 0 } }, "End-to-end analysis of ", h("b", { style: { color: "#e8ecf8" } }, h(CountUp, { to: 138000, suffix: "+" })), " e-commerce transactions across fashion, electronics, and home categories.",
-          h("div", { className: "stats" },
-            h("div", { className: "stat" }, h("small", null, "Total Revenue"), h("strong", null, h(CountUp, { to: 177.13, decimals: 2, prefix: "₹", suffix: " Cr" }))),
-            h("div", { className: "stat" }, h("small", null, "Total Profit"), h("strong", null, h(CountUp, { to: 76.15, decimals: 2, prefix: "₹", suffix: " Cr" }))),
-            h("div", { className: "stat" }, h(Ring, { value: 45.07 }))),
-          h("div", { className: "split" },
-            h("div", null, h("h4", null, "Key Results"), h(Insights, { items: results })),
-            h("div", null, h("h4", null, "Business Recommendations"), h(Insights, { items: recs }))),
-          h("p", { className: "tools" }, h("b", null, "Tools used: "), "SQL (PostgreSQL) · Python (Pandas) · Power BI"))))),
+      h("section", { id: "projects" },
+        h(Reveal, null, h("h2", null, h("span", null, "Projects"), "Selected work")),
+        h("div", { className: "stack" },
 
-      h("section", null,
-        h(Reveal, null, h("h2", null, h("span", null, "More Work"), "Other Projects")),
-        h(Reveal, null, h("div", { className: "card" },
-          h("h3", null, "Nike Sales Analysis"),
-          h("p", { style: { color: "#9aa6c6", margin: 0 } }, "Cleaned and analyzed Nike sales data. Built interactive dashboards in Excel and Tableau, and performed analysis in Python."),
-          h("p", { className: "tools" }, h("b", null, "Tools: "), "Excel · Python · Tableau")))),
+          h(Reveal, null, h(ProjectCard, { href: ECOM_URL, title: "E-Commerce Sales Analysis" },
+            h("h3", null, "E-Commerce Sales Analysis"),
+            h("p", null, "Analysis of ", h(CountUp, { to: 138000, suffix: "+" }), " e-commerce transactions to see where revenue comes from, how customers behave and how profitable the business is."),
+            h("div", { className: "stats" },
+              h("div", { className: "stat" }, h("small", null, "Total revenue"), h("strong", null, h(CountUp, { to: 177.13, decimals: 2, prefix: "\u20B9", suffix: " Cr" }))),
+              h("div", { className: "stat" }, h("small", null, "Total profit"), h("strong", null, h(CountUp, { to: 76.15, decimals: 2, prefix: "\u20B9", suffix: " Cr" }))),
+              h("div", { className: "stat" }, h(Ring, { value: 45.07, label: "Profit margin" }))),
+            h("div", { className: "split" },
+              h("div", null, h("h4", null, "Key results"), h(List, { items: results })),
+              h("div", null, h("h4", null, "Recommendations"), h(List, { items: recs }))),
+            h("p", { className: "tools" }, h("b", null, "Tools: "), "SQL (PostgreSQL) \u00B7 Python \u00B7 Power BI"))),
+
+          h(Reveal, null, h(ProjectCard, { href: HR_URL, title: "HR Employee Attrition Analysis" },
+            h("h3", null, "HR Employee Attrition Analysis"),
+            h("p", null, "Looked at employee attrition data to find out why people leave, then suggested what HR could do about it."),
+            h("div", { className: "stats two" },
+              h("div", { className: "stat" }, h("small", null, "Overall attrition"), h("strong", null, h(CountUp, { to: 16.12, decimals: 2, suffix: "%" }))),
+              h("div", { className: "stat" }, h("small", null, "Sales Rep attrition"), h("strong", null, h(CountUp, { to: 40, prefix: "~", suffix: "%" })))),
+            h("div", { style: { marginTop: 24 } }, h("h4", { style: { margin: "0 0 4px" } }, "What drove it"), h(List, { items: drivers })),
+            h("p", { className: "tools" }, h("b", null, "Tools: "), "SQL (PostgreSQL) \u00B7 Python \u00B7 Power BI"))),
+
+          h(Reveal, null, h(ProjectCard, { href: NIKE_URL, title: "Nike Sales Analysis" },
+            h("h3", null, "Nike Sales Analysis"),
+            h("p", null, "Cleaned Nike sales data and analysed it in Python, then built interactive dashboards in Excel and Tableau."),
+            h("p", { className: "tools" }, h("b", null, "Tools: "), "Excel \u00B7 Python \u00B7 Tableau"))))),
 
       h("section", { id: "skills" },
         h(Reveal, null, h("h2", null, h("span", null, "Toolkit"), "Skills")),
@@ -198,11 +272,11 @@ function App() {
 
       h("section", { id: "contact" },
         h(Reveal, null, h("h2", null, h("span", null, "Get in touch"), "Contact")),
-        h(Reveal, null, h("div", { className: "card" },
-          h("p", { style: { margin: 0 } }, "GitHub: ", h("a", { href: "https://github.com/pulkit-data", target: "_blank", rel: "noopener" }, "github.com/pulkit-data")),
-          h("p", { style: { margin: "8px 0 0" } }, "Portfolio: ", h("a", { href: "https://pulkit-data.github.io", target: "_blank", rel: "noopener" }, "pulkit-data.github.io"))))),
+        h(Reveal, null, h("div", { className: "card contact" },
+          h("p", null, "GitHub: ", h("a", { href: "https://github.com/pulkit-data", target: "_blank", rel: "noopener noreferrer" }, "github.com/pulkit-data")),
+          h("p", null, "LinkedIn: ", h("a", { href: "https://www.linkedin.com/in/pulkit-chauhan-aspiring--data-analyst-data-engineer/", target: "_blank", rel: "noopener noreferrer" }, "linkedin.com/in/pulkit-data"))))),
 
-      h("footer", null, "© Pulkit · Built with React")));
+      h("footer", null, "\u00A9 Pulkit \u00B7 Built with React")));
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(h(App));
