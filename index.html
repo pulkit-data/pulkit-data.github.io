@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pulkit Chauhan | Data Analyst Portfolio</title>
+<title>Pulkit | Data Analyst Portfolio</title>
 <style>
 :root{--bg:#0b1020;--card:#131a30;--line:#222c4a;--text:#e8ecf8;--mute:#9aa6c6;--a:#6ee7b7;--b:#60a5fa;--c:#a78bfa}
 *{box-sizing:border-box}
@@ -57,6 +57,29 @@ a.card:hover::before{opacity:1}
 .cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:var(--b)}
 .cta svg{transition:transform .25s}
 a.card:hover .cta svg{transform:translate(4px,-4px)}
+.viz{margin-top:22px;padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+.brow{display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:12px;margin-top:10px}
+.brow:first-child{margin-top:0}
+.bl{color:var(--mute);font-size:.9rem}.bv{font-weight:600;font-size:.9rem;min-width:84px;text-align:right}
+.track{height:12px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden}
+.fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--b),var(--c));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.cap{margin-top:12px;color:var(--mute);font-size:.8rem}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.badge{padding:7px 13px;border-radius:99px;border:1px solid var(--line);background:rgba(110,231,183,.07);font-size:.85rem;color:var(--text);opacity:0;transform:scale(.9);transition:all .6s ease}
+.viz.in .badge{opacity:1;transform:none}
+.spec{position:relative;height:10px;margin:34px 28px 34px;border-radius:99px;background:linear-gradient(90deg,#f87171,#fbbf24 50%,#6ee7b7)}
+.mk{position:absolute;top:50%;left:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--bg);border:3px solid var(--text);transition:left 1.3s cubic-bezier(.2,.8,.2,1)}
+.mk span{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:.8rem;font-weight:600}
+.mk.up span{bottom:20px}.mk.dn span{top:20px}
+.ends{display:flex;justify-content:space-between;color:var(--mute);font-size:.75rem;margin:0 14px}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.fstep{padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(96,165,250,.08);font-size:.88rem;font-weight:600;opacity:0;transform:translateY(12px);transition:all .6s ease}
+.fstep.ok{border-color:var(--a);background:rgba(110,231,183,.1)}
+.fissues{display:flex;flex-wrap:wrap;gap:8px;max-width:230px}
+.fchip{padding:4px 10px;border-radius:99px;background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.35);font-size:.78rem;opacity:0;transform:scale(.85);transition:all .5s ease}
+.farrow{color:var(--mute);font-size:1.1rem;opacity:0;transition:opacity .6s ease .3s}
+.flow.in .fstep,.flow.in .fchip,.flow.in .farrow{opacity:1;transform:none}
+.flow .cap{flex-basis:100%;margin-top:0}
 .ring{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
 .ring svg{transform:rotate(-90deg)}
 .fg{fill:none;stroke-width:7;stroke-linecap:round;transition:stroke-dashoffset 1.2s ease}
@@ -68,7 +91,7 @@ a.card:hover .cta svg{transform:translate(4px,-4px)}
 .pill:hover{border-color:var(--a)}
 .contact p{margin:0 0 8px;color:var(--text)}
 footer{padding:30px 0 60px;color:var(--mute);text-align:center}
-@media (max-width:700px){.stats,.stats.two,.split{grid-template-columns:1fr}nav{padding:14px 18px}nav div a{margin-left:14px}.hero{padding-top:72px}.card{padding:20px}}
+@media (max-width:700px){.brow{grid-template-columns:84px 1fr auto}.stats,.stats.two,.split{grid-template-columns:1fr}nav{padding:14px 18px}nav div a{margin-left:14px}.hero{padding-top:72px}.card{padding:20px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.pill,.ins li{opacity:1;transform:none}}
 </style>
 </head>
@@ -80,8 +103,9 @@ footer{padding:30px 0 60px;color:var(--mute);text-align:center}
 const h = React.createElement;
 const { useState, useEffect, useRef } = React;
 
-// Replace with the direct Nike repo link when you have it.
-const NIKE_URL = "https://github.com/pulkit-data";
+const MKT_URL = "https://github.com/pulkit-data/Marketing-Campaign-Performance-Analysis";
+const INV_URL = "https://github.com/pulkit-data/Inventory-Demand-Analysis";
+const SUP_URL = "https://github.com/pulkit-data/Supplier-Delivery-Fulfilment-Performance";
 const ECOM_URL = "https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI";
 const HR_URL = "https://github.com/pulkit-data/HR-Employee-Attrition-Analysis";
 
@@ -157,6 +181,37 @@ function Ring({ value, label }) {
       h("div", { style: { color: "#9aa6c6", fontSize: ".9rem" } }, label)));
 }
 
+function Bars({ rows, caption, children }) {
+  const [ref, seen] = useInView();
+  return h("div", { className: "viz" + (seen ? " in" : ""), ref },
+    rows.map((r, i) => h("div", { className: "brow", key: r.l },
+      h("span", { className: "bl" }, r.l),
+      h("div", { className: "track" }, h("div", { className: "fill", style: { width: seen ? r.pct + "%" : "0%", transitionDelay: i * 150 + "ms" } })),
+      h("span", { className: "bv" }, r.v))),
+    caption && h("div", { className: "cap" }, caption), children);
+}
+
+function Spectrum({ points, left, right, caption }) {
+  const [ref, seen] = useInView();
+  return h("div", { className: "viz", ref },
+    h("div", { className: "spec" }, points.map((p, i) =>
+      h("div", { key: p.l, className: "mk " + p.d, style: { left: seen ? p.at + "%" : "50%", transitionDelay: i * 200 + "ms" } }, h("span", null, p.l)))),
+    h("div", { className: "ends" }, h("span", null, left), h("span", null, right)),
+    h("div", { className: "cap" }, caption));
+}
+
+function Flow() {
+  const [ref, seen] = useInView();
+  const issues = ["Duplicates", "Missing values", "Negatives", "Date issues"];
+  const arrow = (k) => h("span", { className: "farrow", key: k, "aria-hidden": "true" }, "\u2192");
+  return h("div", { className: "viz flow" + (seen ? " in" : ""), ref },
+    h("div", { className: "fstep" }, "Raw store data"), arrow("a"),
+    h("div", { className: "fissues" }, issues.map((t, i) => h("span", { className: "fchip", key: t, style: { transitionDelay: i * 120 + "ms" } }, t))), arrow("b"),
+    h("div", { className: "fstep ok", style: { transitionDelay: "500ms" } }, "Clean data"), arrow("c"),
+    h("div", { className: "fstep", style: { transitionDelay: "700ms" } }, "Overstock and stockout risks"),
+    h("div", { className: "cap" }, "Cleaning and analysis flow"));
+}
+
 function List({ items }) {
   const [ref, seen] = useInView();
   return h("ul", { className: "ins" + (seen ? " in" : ""), ref },
@@ -216,6 +271,21 @@ const drivers = [
   "Low salary and short tenure raised attrition",
   "Sales Representatives had the highest attrition, at nearly 40%"
 ];
+const mkt = [
+  "High Spenders responded at more than double the rate of Low Spenders",
+  "Younger customers (18 to 30) had the highest response rate",
+  "Wine was the top product category"
+];
+const sup = [
+  "Found the best and the highest-risk suppliers",
+  "Alpha_Inc and Epsilon_Group were the most reliable",
+  "Delta_Logistics had the highest defect rate and the lowest compliance"
+];
+const inv = [
+  "Cleaned messy data: duplicates, missing values, negatives and date issues",
+  "Identified overstock and stockout risks",
+  "Built the dashboard with Matplotlib and Seaborn"
+];
 const skills = ["SQL", "Python (Pandas)", "Excel", "Power BI", "Tableau", "Data Cleaning", "Exploratory Data Analysis", "Data Visualization"];
 const heights = [40, 65, 50, 85, 60, 100, 75, 90, 55, 70];
 
@@ -247,6 +317,10 @@ function App() {
               h("div", { className: "stat" }, h("small", null, "Total revenue"), h("strong", null, h(CountUp, { to: 177.13, decimals: 2, prefix: "\u20B9", suffix: " Cr" }))),
               h("div", { className: "stat" }, h("small", null, "Total profit"), h("strong", null, h(CountUp, { to: 76.15, decimals: 2, prefix: "\u20B9", suffix: " Cr" }))),
               h("div", { className: "stat" }, h(Ring, { value: 45.07, label: "Profit margin" }))),
+            h(Bars, { rows: [
+              { l: "Revenue", pct: 100, v: "\u20B9177.13 Cr" },
+              { l: "Profit", pct: 76.15 / 177.13 * 100, v: "\u20B976.15 Cr" }
+            ], caption: "Revenue vs profit, drawn to scale" }),
             h("div", { className: "split" },
               h("div", null, h("h4", null, "Key results"), h(List, { items: results })),
               h("div", null, h("h4", null, "Recommendations"), h(List, { items: recs }))),
@@ -258,13 +332,43 @@ function App() {
             h("div", { className: "stats two" },
               h("div", { className: "stat" }, h("small", null, "Overall attrition"), h("strong", null, h(CountUp, { to: 16.12, decimals: 2, suffix: "%" }))),
               h("div", { className: "stat" }, h("small", null, "Sales Rep attrition"), h("strong", null, h(CountUp, { to: 40, prefix: "~", suffix: "%" })))),
+            h(Bars, { rows: [
+              { l: "Overall", pct: 16.12 / 50 * 100, v: "16.12%" },
+              { l: "Sales Reps", pct: 80, v: "nearly 40%" }
+            ], caption: "Attrition rate, scale of 0 to 50%" }),
             h("div", { style: { marginTop: 24 } }, h("h4", { style: { margin: "0 0 4px" } }, "What drove it"), h(List, { items: drivers })),
             h("p", { className: "tools" }, h("b", null, "Tools: "), "SQL (PostgreSQL) \u00B7 Python \u00B7 Power BI"))),
 
-          h(Reveal, null, h(ProjectCard, { href: NIKE_URL, title: "Nike Sales Analysis" },
-            h("h3", null, "Nike Sales Analysis"),
-            h("p", null, "Cleaned Nike sales data and analysed it in Python, then built interactive dashboards in Excel and Tableau."),
-            h("p", { className: "tools" }, h("b", null, "Tools: "), "Excel \u00B7 Python \u00B7 Tableau"))))),
+          h(Reveal, null, h(ProjectCard, { href: MKT_URL, title: "Marketing Campaign Performance" },
+            h("h3", null, "Marketing Campaign Performance"),
+            h("p", null, "Analysed customer and campaign data to see which campaigns and customer segments perform best."),
+            h(Bars, { rows: [
+              { l: "Low Spenders", pct: 40, v: "1x" },
+              { l: "High Spenders", pct: 80, v: "more than 2x" }
+            ], caption: "Campaign response, relative comparison (exact rates not shown)" },
+              h("div", { className: "badges" },
+                h("span", { className: "badge" }, "Highest response: ages 18 to 30"),
+                h("span", { className: "badge" }, "Top category: Wine"))),
+            h("div", { style: { marginTop: 18 } }, h(List, { items: mkt })),
+            h("p", { className: "tools" }, h("b", null, "Tools: "), "SQL \u00B7 Python \u00B7 Tableau"))),
+
+          h(Reveal, null, h(ProjectCard, { href: SUP_URL, title: "Supplier Delivery and Fulfilment Performance" },
+            h("h3", null, "Supplier Delivery & Fulfilment Performance"),
+            h("p", null, "Evaluated suppliers on defect rates, compliance, delivery time and order fulfilment."),
+            h(Spectrum, { left: "Higher risk", right: "More reliable", caption: "Reliability ranking, not exact scores", points: [
+              { l: "Delta_Logistics", at: 6, d: "up" },
+              { l: "Alpha_Inc", at: 78, d: "up" },
+              { l: "Epsilon_Group", at: 92, d: "dn" }
+            ] }),
+            h("div", { style: { marginTop: 18 } }, h(List, { items: sup })),
+            h("p", { className: "tools" }, h("b", null, "Tools: "), "SQL \u00B7 Python \u00B7 Tableau"))),
+
+          h(Reveal, null, h(ProjectCard, { href: INV_URL, title: "Inventory and Demand Analysis" },
+            h("h3", null, "Inventory & Demand Analysis"),
+            h("p", null, "End-to-end data cleaning and analysis of inventory levels and demand patterns across stores."),
+            h(Flow),
+            h("div", { style: { marginTop: 18 } }, h(List, { items: inv })),
+            h("p", { className: "tools" }, h("b", null, "Tools: "), "Python \u00B7 Pandas \u00B7 Matplotlib \u00B7 Seaborn"))))),
 
       h("section", { id: "skills" },
         h(Reveal, null, h("h2", null, h("span", null, "Toolkit"), "Skills")),
@@ -274,7 +378,7 @@ function App() {
         h(Reveal, null, h("h2", null, h("span", null, "Get in touch"), "Contact")),
         h(Reveal, null, h("div", { className: "card contact" },
           h("p", null, "GitHub: ", h("a", { href: "https://github.com/pulkit-data", target: "_blank", rel: "noopener noreferrer" }, "github.com/pulkit-data")),
-          h("p", null, "LinkedIn: ", h("a", { href: "https://www.linkedin.com/in/pulkit-chauhan-aspiring--data-analyst-data-engineer/", target: "_blank", rel: "noopener noreferrer" }, "linkedin.com/in/pulkit-data"))))),
+          h("p", null, "LinkedIn: ", h("a", { href: "https://linkedin.com/in/pulkit-data", target: "_blank", rel: "noopener noreferrer" }, "linkedin.com/in/pulkit-data"))))),
 
       h("footer", null, "\u00A9 Pulkit \u00B7 Built with React")));
 }
