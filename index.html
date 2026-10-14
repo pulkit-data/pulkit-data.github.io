@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pulkit | Data Analyst Portfolio</title>
+<title>Pulkit Chauhan | Data Analyst Portfolio</title>
 <style>
 :root{--bg:#0b1020;--card:#131a30;--line:#222c4a;--text:#e8ecf8;--mute:#9aa6c6;--a:#6ee7b7;--b:#60a5fa;--c:#a78bfa}
 *{box-sizing:border-box}
@@ -108,6 +108,7 @@ const INV_URL = "https://github.com/pulkit-data/Inventory-Demand-Analysis";
 const SUP_URL = "https://github.com/pulkit-data/Supplier-Delivery-Fulfilment-Performance";
 const ECOM_URL = "https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI";
 const HR_URL = "https://github.com/pulkit-data/HR-Employee-Attrition-Analysis";
+const SIP_URL = "https://github.com/pulkit-data/sales-intelligence-pipeline";
 
 function useInView() {
   const ref = useRef(null);
@@ -212,6 +213,16 @@ function Flow() {
     h("div", { className: "cap" }, "Cleaning and analysis flow"));
 }
 
+function PipelineFlow() {
+  const [ref, seen] = useInView();
+  const arrow = (k) => h("span", { className: "farrow", key: k, "aria-hidden": "true" }, "\u2192");
+  return h("div", { className: "viz flow" + (seen ? " in" : ""), ref },
+    h("div", { className: "fstep" }, "Python"), arrow("a"),
+    h("div", { className: "fstep", style: { transitionDelay: "250ms" } }, "PostgreSQL"), arrow("b"),
+    h("div", { className: "fstep ok", style: { transitionDelay: "500ms" } }, "Power BI"),
+    h("div", { className: "cap" }, "Pipeline flow, from raw sales data to the dashboard"));
+}
+
 function List({ items }) {
   const [ref, seen] = useInView();
   return h("ul", { className: "ins" + (seen ? " in" : ""), ref },
@@ -292,14 +303,14 @@ const heights = [40, 65, 50, 85, 60, 100, 75, 90, 55, 70];
 function App() {
   return h(React.Fragment, null,
     h(ScrollBar),
-    h("nav", null, h("b", null, "Pulkit"),
+    h("nav", null, h("b", null, "Pulkit Chauhan"),
       h("div", null, h("a", { href: "#projects" }, "Projects"), h("a", { href: "#skills" }, "Skills"), h("a", { href: "#contact" }, "Contact"))),
     h("main", null,
       h("section", { className: "hero" },
         h("div", { className: "bars", "aria-hidden": "true" },
           heights.map((x, i) => h("i", { key: i, style: { height: x + "%", animationDelay: i * 0.25 + "s", animationDuration: 2.4 + (i % 4) * 0.5 + "s" } }))),
         h("span", { className: "tag" }, "Aspiring Data Analyst"),
-        h("h1", null, "Pulkit"),
+        h("h1", null, "Pulkit Chauhan"),
         h(Typing, { words: ["SQL", "Python", "Power BI", "Tableau", "Excel"] }),
         h("p", { className: "lead" }, "MBA in Finance and Marketing, now building analytics projects with SQL, Python, Excel, Power BI and Tableau."),
         h("div", { className: "btns" },
@@ -309,6 +320,12 @@ function App() {
       h("section", { id: "projects" },
         h(Reveal, null, h("h2", null, h("span", null, "Projects"), "Selected work")),
         h("div", { className: "stack" },
+
+          h(Reveal, null, h(ProjectCard, { href: SIP_URL, title: "Sales Intelligence Pipeline" },
+            h("h3", null, "Sales Intelligence Pipeline"),
+            h("p", null, "An end-to-end sales data pipeline. Python prepares the data, PostgreSQL stores it, and Power BI turns it into dashboards."),
+            h(PipelineFlow),
+            h("p", { className: "tools" }, h("b", null, "Tools: "), "Python \u00B7 PostgreSQL \u00B7 Power BI"))),
 
           h(Reveal, null, h(ProjectCard, { href: ECOM_URL, title: "E-Commerce Sales Analysis" },
             h("h3", null, "E-Commerce Sales Analysis"),
@@ -380,7 +397,7 @@ function App() {
           h("p", null, "GitHub: ", h("a", { href: "https://github.com/pulkit-data", target: "_blank", rel: "noopener noreferrer" }, "github.com/pulkit-data")),
           h("p", null, "LinkedIn: ", h("a", { href: "https://linkedin.com/in/pulkit-data", target: "_blank", rel: "noopener noreferrer" }, "linkedin.com/in/pulkit-data"))))),
 
-      h("footer", null, "\u00A9 Pulkit \u00B7 Built with React")));
+      h("footer", null, "\u00A9 Pulkit Chauhan \u00B7 Built with React")));
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(h(App));
