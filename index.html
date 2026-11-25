@@ -3,169 +3,889 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pulkit Chauhan, data analyst</title>
-<meta name="description" content="Data analyst in Ahmedabad. SQL, Python, Power BI and Tableau projects on suppliers, sales, inventory, marketing and HR data.">
+
+<title>Pulkit Chauhan | Data Analyst</title>
+
+<meta name="description" content="Pulkit Chauhan is a data analyst with experience in procurement and operations, working with SQL, Python, Excel, Power BI and Tableau.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+
 <style>
-:root{--paper:#fdfdfd;--ink:#172033;--muted:#55607a;--rule:#d5d9e2;--flag:#b3261e}
-@media (prefers-color-scheme:dark){:root{--paper:#12151c;--ink:#e8eaf0;--muted:#98a1b5;--rule:#2a3040;--flag:#ff8a80}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 Literata,Georgia,serif;font-variant-numeric:lining-nums tabular-nums}
-a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}
-a:hover{text-decoration-thickness:2px}
-a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.page{max-width:56rem;margin:0 auto;padding:4rem 1.5rem 5rem}
-.row{display:grid;grid-template-columns:11rem minmax(0,1fr);column-gap:2rem;padding:1.5rem 0;border-top:1px solid var(--rule)}
-.row.first{border-top:0;padding-top:0}
-.head{padding-bottom:0}
-.head+.row{border-top:0;padding-top:.25rem}
-.side{color:var(--muted);font-size:.9rem;line-height:1.5;padding-top:.3rem}
-.body{max-width:38rem}
-.body>*:first-child{margin-top:0}
-h1{font-size:2.75rem;font-weight:600;line-height:1.1;letter-spacing:-.015em;margin:0 0 1.25rem}
-h2{font-size:.9rem;font-weight:400;color:var(--muted);margin:0}
-h3{font-size:1.15rem;font-weight:600;line-height:1.3;margin:0 0 .5rem}
-p{margin:.6rem 0}
-.flag{color:var(--flag);font-weight:600}
-.minor h3{font-size:1rem}
-.minor p{font-size:.98rem}
-.intro{font-size:1.2rem;line-height:1.55}
-.contact{margin-top:1.25rem}
-.contact a{margin-right:1.25rem}
-img{max-width:100%;height:auto}
-ul{margin:0;padding:0;list-style:none}
-li{margin:0 0 .5rem}
+:root{
+  --paper:#fdfdfd;
+  --ink:#172033;
+  --muted:#59647a;
+  --rule:#d5d9e2;
+  --flag:#9f211a;
+  --soft:#f5f6f8;
+}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#12151c;
+    --ink:#e8eaf0;
+    --muted:#98a1b5;
+    --rule:#2a3040;
+    --flag:#ff8a80;
+    --soft:#191d26;
+  }
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:400 1.0625rem/1.65 Literata,Georgia,serif;
+  font-variant-numeric:lining-nums tabular-nums;
+}
+
+a{
+  color:inherit;
+  text-decoration-thickness:1px;
+  text-underline-offset:.2em;
+}
+
+a:hover{
+  text-decoration-thickness:2px;
+}
+
+a:focus-visible{
+  outline:2px solid var(--ink);
+  outline-offset:3px;
+}
+
+.page{
+  max-width:58rem;
+  margin:0 auto;
+  padding:4rem 1.5rem 6rem;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:11rem minmax(0,1fr);
+  column-gap:2.5rem;
+  padding:1.7rem 0;
+  border-top:1px solid var(--rule);
+}
+
+.row.first{
+  border-top:0;
+  padding-top:0;
+}
+
+.head{
+  padding-bottom:.6rem;
+}
+
+.head+.row{
+  padding-top:1.2rem;
+}
+
+.side{
+  color:var(--muted);
+  font-size:.88rem;
+  line-height:1.5;
+  padding-top:.3rem;
+}
+
+.body{
+  max-width:40rem;
+}
+
+.body>*:first-child{
+  margin-top:0;
+}
+
+h1{
+  font-size:2.9rem;
+  font-weight:600;
+  line-height:1.08;
+  letter-spacing:-.02em;
+  margin:0 0 1.25rem;
+}
+
+h2{
+  font-size:.9rem;
+  font-weight:400;
+  color:var(--muted);
+  margin:0;
+}
+
+h3{
+  font-size:1.17rem;
+  font-weight:600;
+  line-height:1.3;
+  margin:0 0 .55rem;
+}
+
+p{
+  margin:.65rem 0;
+}
+
+.intro{
+  font-size:1.2rem;
+  line-height:1.6;
+  max-width:39rem;
+}
+
+.contact{
+  margin-top:1.35rem;
+}
+
+.contact a{
+  margin-right:1.25rem;
+}
+
+.flag{
+  font-weight:600;
+  color:var(--flag);
+}
+
+.project-meta{
+  color:var(--muted);
+  font-size:.9rem;
+  margin-bottom:.55rem;
+}
+
+.project-image{
+  display:block;
+  width:100%;
+  margin:1rem 0 1.1rem;
+  border:1px solid var(--rule);
+}
+
+.project-links{
+  margin-top:.85rem;
+}
+
+.project-links a{
+  margin-right:1rem;
+}
+
+.featured{
+  padding-top:1.8rem;
+  padding-bottom:2rem;
+}
+
+.featured h3{
+  font-size:1.25rem;
+}
+
+.more-project{
+  padding-top:1.25rem;
+  padding-bottom:1.25rem;
+}
+
+.more-project h3{
+  font-size:1.05rem;
+}
+
+.skills-group{
+  margin-bottom:1.2rem;
+}
+
+.skills-label{
+  font-weight:600;
+  margin-bottom:.25rem;
+}
+
+.work-highlight{
+  margin:1rem 0;
+  padding:.9rem 1rem;
+  background:var(--soft);
+  border-left:2px solid var(--rule);
+}
+
+ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+li{
+  margin:0 0 .55rem;
+}
+
+footer{
+  margin-top:1rem;
+}
+
 @media (max-width:40rem){
-  .page{padding-top:2.5rem}
-  .row{grid-template-columns:1fr}
-  .side{padding:0 0 .5rem}
-  h1{font-size:2.2rem}
+
+  .page{
+    padding:2.5rem 1.2rem 4rem;
+  }
+
+  .row{
+    grid-template-columns:1fr;
+    gap:.25rem;
+  }
+
+  .side{
+    padding:0 0 .45rem;
+  }
+
+  h1{
+    font-size:2.25rem;
+  }
+
+  .intro{
+    font-size:1.1rem;
+  }
+
+  .contact a{
+    display:inline-block;
+    margin-bottom:.4rem;
+  }
 }
 </style>
 </head>
+
 <body>
+
 <div class="page">
 
 <header class="row first">
-  <div class="side">Ahmedabad<br>Open to relocating</div>
-  <div class="body">
-    <h1>Pulkit Chauhan</h1>
-    <p class="intro">I'm a data analyst. I work with SQL, Python, Power BI and Tableau. Since September 2025 I've run purchasing at Acrifab and built the supplier, spend and inventory reports from Zoho data. I'm looking for data analyst, business analyst and operations analyst roles.</p>
-    <p class="contact"><a href="mailto:pulkitchauhan.ank@gmail.com">pulkitchauhan.ank@gmail.com</a><a href="https://linkedin.com/in/pulkit-data">LinkedIn</a><a href="https://github.com/pulkit-data">GitHub</a></p>
+
+  <div class="side">
+    Ahmedabad<br>
+    Open to relocating
   </div>
+
+  <div class="body">
+
+    <h1>Pulkit Chauhan</h1>
+
+    <p class="intro">
+      I work at the intersection of data and operations. In my current
+      procurement role at Acrifab, I work with purchasing, supplier and
+      inventory data from Zoho and use Excel and Power BI to build reports
+      and track performance. Alongside that work, I use SQL and Python for
+      data analysis and build dashboards in Power BI and Tableau.
+    </p>
+
+    <p>
+      I'm looking for data analyst, operations analyst, MIS and business
+      analyst roles where I can combine hands-on business experience with
+      data analysis.
+    </p>
+
+    <p class="contact">
+
+      <a href="mailto:pulkitchauhan.ank@gmail.com">
+        Email
+      </a>
+
+      <a href="https://linkedin.com/in/pulkit-data"
+         target="_blank"
+         rel="noopener">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/pulkit-data"
+         target="_blank"
+         rel="noopener">
+        GitHub
+      </a>
+
+      <!-- Replace with your actual resume file -->
+      <a href="resume.pdf"
+         target="_blank"
+         rel="noopener">
+        Resume
+      </a>
+
+    </p>
+
+  </div>
+
 </header>
 
+
 <main>
-<section aria-labelledby="projects">
-  <div class="row head"><div class="side"><h2 id="projects">Projects</h2></div></div>
 
-  <article class="row">
-    <div class="side">SQL, Python, Tableau</div>
-    <div class="body">
-      <h3><a href="https://github.com/pulkit-data/Supplier-Delivery-Fulfilment-Performance">Supplier delivery and fulfilment</a></h3>
-      <!-- Dashboard screenshot goes here: <img src="img/supplier-dashboard.png" alt="Tableau dashboard ranking five suppliers" width="680"> -->
-      <p>I scored 5 suppliers across 777 purchase orders on defect rate, compliance, delivery time and fulfilment. <span class="flag">Delta_Logistics was the riskiest, with a 10.8% defect rate and 61% compliance.</span> Alpha_Inc and Epsilon_Group were the most reliable.</p>
-      <p>I recommended shifting volume and putting a corrective plan in place, and built a Tableau dashboard that ranks the suppliers.</p>
-    </div>
-  </article>
 
-  <article class="row">
-    <div class="side">SQL, Python, Power BI</div>
-    <div class="body">
-      <h3><a href="https://github.com/pulkit-data/HR-Employee-Attrition-Analysis">HR employee attrition</a></h3>
-      <!-- Dashboard screenshot goes here -->
-      <p>Overall attrition was 16.12% and nearly 40% for sales representatives. Overtime, lower pay, young age and short tenure were the main drivers.</p>
-    </div>
-  </article>
-
-  <article class="row">
-    <div class="side">SQL, Python, Power BI</div>
-    <div class="body">
-      <h3><a href="https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI">E-commerce sales</a></h3>
-      <!-- Dashboard screenshot goes here -->
-      <p>138,000+ transactions from a public dataset. The South region and the Consumer segment brought in the most revenue, the Mobile App was the top channel, and heavy discounts cut into margin.</p>
-      <p>I recommended tighter discounts to protect margin and more investment in the Mobile App and Organic Search channels, which led revenue. I built the dashboard in Power BI.</p>
-    </div>
-  </article>
-
-  <article class="row minor">
-    <div class="side">Python, PostgreSQL, Power BI</div>
-    <div class="body">
-      <h3><a href="https://github.com/pulkit-data/sales-intelligence-pipeline">Sales intelligence pipeline</a></h3>
-      <p>Python prepares the sales data, PostgreSQL stores it and Power BI reports on it.</p>
-    </div>
-  </article>
-
-  <article class="row minor">
-    <div class="side">Python, Pandas, Matplotlib, Seaborn</div>
-    <div class="body">
-      <h3><a href="https://github.com/pulkit-data/Inventory-Demand-Analysis">Inventory and demand</a></h3>
-      <p>I cleaned multi-store inventory data (duplicates, missing values, negative quantities, wrong dates) and compared stockout and overstock risk by item. I flagged high-demand items running low and slow movers sitting overstocked, and recommended reorder points and clearance for the slow movers.</p>
-    </div>
-  </article>
-
-  <article class="row minor">
-    <div class="side">SQL, Python, Tableau</div>
-    <div class="body">
-      <h3><a href="https://github.com/pulkit-data/Marketing-Campaign-Performance-Analysis">Marketing campaigns</a></h3>
-      <p>High spenders responded at more than twice the rate of low spenders. Customers aged 18 to 30 responded most, and wine was the top category.</p>
-    </div>
-  </article>
-</section>
+<!-- ==================== -->
+<!-- WORK -->
+<!-- ==================== -->
 
 <section aria-labelledby="work">
-  <div class="row head"><div class="side"><h2 id="work">Work</h2></div></div>
+
+  <div class="row head">
+
+    <div class="side">
+      <h2 id="work">Work</h2>
+    </div>
+
+  </div>
+
 
   <article class="row">
-    <div class="side">Sep 2025 to present<br>Ahmedabad</div>
-    <div class="body">
-      <h3>Procurement analyst, Acrifab Pvt. Ltd.</h3>
-      <p>I build the reports behind purchasing decisions: inventory ageing, expiry exposure (30, 60 and 90 days) and category spend, in Excel and Power BI from Zoho exports. I also built a supplier tracker for on-time delivery, lead-time variance and rejection rate.</p>
-      <p>I set reorder points and safety stock for each SKU from consumption history, to cut stockouts and overstock, and I compare negotiated against invoiced prices to report savings.</p>
-      <p>The job itself is purchasing: 20 to 40 purchase orders a month across about 10 vendors, around 200 cartridge units, plus 5 to 8 GST invoices and challans a day in Zoho.</p>
+
+    <div class="side">
+      Sep 2025 to present<br>
+      Ahmedabad
     </div>
+
+    <div class="body">
+
+      <h3>
+        Procurement Analyst, Acrifab Pvt. Ltd.
+      </h3>
+
+      <p>
+        My day-to-day work is purchasing and dispatch, but a large part of
+        the job involves working with operational data and reporting.
+      </p>
+
+      <div class="work-highlight">
+
+        <p>
+          I build Excel and Power BI reports from Zoho exports to track
+          inventory ageing, expiry exposure, category spend and supplier
+          performance.
+        </p>
+
+        <p>
+          I track supplier on-time delivery, lead-time variance and
+          rejection rates, and use consumption history to help set reorder
+          points and safety-stock levels.
+        </p>
+
+      </div>
+
+      <p>
+        I also handle around 20–40 purchase orders a month across about
+        10 vendors, along with daily invoice and challan processing in
+        Zoho. This gives me practical experience with the operational
+        side of the data I analyse.
+      </p>
+
+    </div>
+
   </article>
 
+
   <article class="row">
-    <div class="side">Oct 2024 to Jun 2025<br>Ahmedabad</div>
-    <div class="body">
-      <h3>Senior sales executive, Bluestone Jewellery &amp; Lifestyle</h3>
-      <p>I grew store revenue 15% by going through customer and sales trends in Excel and putting effort into the segments with the most room to grow. I also built KPI dashboards for sales, inventory and team performance, which cut manual reporting by more than 3 hours a week.</p>
+
+    <div class="side">
+      Oct 2024 to Jun 2025<br>
+      Ahmedabad
     </div>
+
+    <div class="body">
+
+      <h3>
+        Senior Sales Executive, Bluestone Jewellery &amp; Lifestyle
+      </h3>
+
+      <p>
+        Used Excel to review customer and sales trends, identify stronger
+        customer segments and support store-level sales decisions. Built
+        KPI reports covering sales, inventory and team performance,
+        reducing manual reporting by more than three hours a week.
+      </p>
+
+    </div>
+
   </article>
+
 </section>
+
+
+<!-- ==================== -->
+<!-- SELECTED PROJECTS -->
+<!-- ==================== -->
+
+<section aria-labelledby="projects">
+
+  <div class="row head">
+
+    <div class="side">
+      <h2 id="projects">Selected projects</h2>
+    </div>
+
+  </div>
+
+
+  <!-- SUPPLIER PROJECT -->
+
+  <article class="row featured">
+
+    <div class="side">
+      SQL<br>
+      Python<br>
+      Tableau
+    </div>
+
+    <div class="body">
+
+      <h3>
+
+        <a href="https://github.com/pulkit-data/Supplier-Delivery-Fulfilment-Performance"
+           target="_blank"
+           rel="noopener">
+
+          Supplier delivery and fulfilment
+
+        </a>
+
+      </h3>
+
+      <p class="project-meta">
+        Procurement / supplier performance
+      </p>
+
+      <!--
+      Add your dashboard screenshot here.
+
+      Example:
+
+      <img
+        class="project-image"
+        src="img/supplier-dashboard.png"
+        alt="Supplier performance dashboard showing delivery, compliance and defect metrics">
+      -->
+
+      <p>
+        I analysed 777 purchase orders across five suppliers and compared
+        defect rate, compliance, delivery time and fulfilment performance.
+      </p>
+
+      <p>
+
+        <span class="flag">
+          Delta_Logistics had the highest risk, with a 10.8% defect rate
+          and 61% compliance.
+        </span>
+
+        Alpha_Inc and Epsilon_Group performed more consistently.
+
+      </p>
+
+      <p>
+        The analysis was used to identify suppliers that needed corrective
+        action and where purchasing volume could be shifted.
+      </p>
+
+      <p class="project-links">
+
+        <a href="https://github.com/pulkit-data/Supplier-Delivery-Fulfilment-Performance"
+           target="_blank"
+           rel="noopener">
+
+          GitHub →
+
+        </a>
+
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- ECOMMERCE PROJECT -->
+
+  <article class="row featured">
+
+    <div class="side">
+      SQL<br>
+      Python<br>
+      Power BI
+    </div>
+
+    <div class="body">
+
+      <h3>
+
+        <a href="https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI"
+           target="_blank"
+           rel="noopener">
+
+          E-commerce sales analysis
+
+        </a>
+
+      </h3>
+
+      <p class="project-meta">
+        Revenue / margin / channel analysis
+      </p>
+
+      <!--
+      Add your Power BI dashboard screenshot here.
+      -->
+
+      <p>
+        I analysed more than 138,000 transactions to understand revenue,
+        profit, customer segments, regions, channels and the effect of
+        discounting.
+      </p>
+
+      <p>
+        The South region and Consumer segment generated the most revenue,
+        while the Mobile App was the strongest channel. Higher discounts
+        were associated with weaker margins.
+      </p>
+
+      <p>
+        I used SQL and Python for analysis and built the final dashboard
+        in Power BI.
+      </p>
+
+      <p class="project-links">
+
+        <a href="https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI"
+           target="_blank"
+           rel="noopener">
+
+          GitHub →
+
+        </a>
+
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- SALES PIPELINE -->
+
+  <article class="row featured">
+
+    <div class="side">
+      Python<br>
+      PostgreSQL<br>
+      Power BI
+    </div>
+
+    <div class="body">
+
+      <h3>
+
+        <a href="https://github.com/pulkit-data/sales-intelligence-pipeline"
+           target="_blank"
+           rel="noopener">
+
+          Sales intelligence pipeline
+
+        </a>
+
+      </h3>
+
+      <p class="project-meta">
+        ETL / database / reporting
+      </p>
+
+      <p>
+        I built a small analytics pipeline where Python prepares and
+        transforms the sales data, PostgreSQL stores the cleaned data,
+        and Power BI is used for reporting.
+      </p>
+
+      <p>
+        The project focuses on the work that happens before the dashboard:
+        cleaning, transforming and structuring data for analysis.
+      </p>
+
+      <p class="project-links">
+
+        <a href="https://github.com/pulkit-data/sales-intelligence-pipeline"
+           target="_blank"
+           rel="noopener">
+
+          GitHub →
+
+        </a>
+
+      </p>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+<!-- ==================== -->
+<!-- MORE PROJECTS -->
+<!-- ==================== -->
+
+<section aria-labelledby="more-projects">
+
+  <div class="row head">
+
+    <div class="side">
+      <h2 id="more-projects">More projects</h2>
+    </div>
+
+  </div>
+
+
+  <!-- INVENTORY -->
+
+  <article class="row more-project">
+
+    <div class="side">
+      Python<br>
+      Pandas<br>
+      Matplotlib
+    </div>
+
+    <div class="body">
+
+      <h3>
+
+        <a href="https://github.com/pulkit-data/Inventory-Demand-Analysis"
+           target="_blank"
+           rel="noopener">
+
+          Inventory and demand analysis
+
+        </a>
+
+      </h3>
+
+      <p>
+        Cleaned multi-store inventory data containing duplicates, missing
+        values, negative quantities and inconsistent dates. Analysed
+        stockout and overstock risk and identified high-demand items
+        running low and slow-moving inventory.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- HR -->
+
+  <article class="row more-project">
+
+    <div class="side">
+      SQL<br>
+      Python<br>
+      Power BI
+    </div>
+
+    <div class="body">
+
+      <h3>
+
+        <a href="https://github.com/pulkit-data/HR-Employee-Attrition-Analysis"
+           target="_blank"
+           rel="noopener">
+
+          HR employee attrition
+
+        </a>
+
+      </h3>
+
+      <p>
+        Analysed employee attrition across 1,470 records. Overall
+        attrition was 16.12%, with higher rates among sales representatives
+        and employees affected by overtime, lower pay and shorter tenure.
+      </p>
+
+    </div>
+
+  </article>
+
+
+  <!-- MARKETING -->
+
+  <article class="row more-project">
+
+    <div class="side">
+      SQL<br>
+      Python<br>
+      Tableau
+    </div>
+
+    <div class="body">
+
+      <h3>
+
+        <a href="https://github.com/pulkit-data/Marketing-Campaign-Performance-Analysis"
+           target="_blank"
+           rel="noopener">
+
+          Marketing campaign analysis
+
+        </a>
+
+      </h3>
+
+      <p>
+        Compared campaign response across customer age, spending and
+        product categories. Higher-spending customers responded at more
+        than twice the rate of lower-spending customers, while the
+        18–30 segment had the strongest response.
+      </p>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+<!-- ==================== -->
+<!-- SKILLS -->
+<!-- ==================== -->
 
 <section aria-labelledby="skills">
+
   <div class="row">
-    <div class="side"><h2 id="skills">Skills</h2></div>
-    <div class="body">
-      <p>PostgreSQL (joins, CTEs, window functions), Python (Pandas, NumPy, Matplotlib, Seaborn, SQLAlchemy), Excel (Power Query, pivot tables, XLOOKUP, INDEX-MATCH), Power BI (DAX), Tableau.</p>
-      <p>Procure-to-pay (PR, PO, GRN, invoice), vendor negotiation and scorecards, FIFO and lot-expiry control, reorder points and safety stock, GST and HSN, Zoho Inventory and Books.</p>
+
+    <div class="side">
+
+      <h2 id="skills">
+        Skills
+      </h2>
+
     </div>
+
+    <div class="body">
+
+
+      <div class="skills-group">
+
+        <p class="skills-label">
+          Analytics
+        </p>
+
+        <p>
+          SQL · PostgreSQL · Python · Pandas · NumPy · Excel · Power Query
+          · Power BI · DAX · Tableau
+        </p>
+
+      </div>
+
+
+      <div class="skills-group">
+
+        <p class="skills-label">
+          Data work
+        </p>
+
+        <p>
+          Data cleaning · ETL · KPI reporting · Dashboard development
+          · Supplier analysis · Inventory analysis · Sales analysis
+        </p>
+
+      </div>
+
+
+      <div class="skills-group">
+
+        <p class="skills-label">
+          Business
+        </p>
+
+        <p>
+          Procurement · Supplier performance · Spend analysis · Inventory
+          planning · Procure-to-pay · Zoho Inventory · Zoho Books
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
+
+
+<!-- ==================== -->
+<!-- EDUCATION -->
+<!-- ==================== -->
 
 <section aria-labelledby="education">
+
   <div class="row">
-    <div class="side"><h2 id="education">Education</h2></div>
-    <div class="body">
-      <ul>
-        <li>Data analytics program, Coding Ninjas with IIT Guwahati, 2025 to 2026</li>
-        <li>MBA in Finance and Marketing, Prestige Institute of Management and Research, Gwalior, 2023 to 2025</li>
-        <li>B.Sc. Hotel Management, Jiwaji University, Gwalior, 2018 to 2021</li>
-      </ul>
+
+    <div class="side">
+
+      <h2 id="education">
+        Education
+      </h2>
+
     </div>
+
+    <div class="body">
+
+      <ul>
+
+        <li>
+          Data Analytics Program, Coding Ninjas with IIT Guwahati,
+          2025–2026
+        </li>
+
+        <li>
+          MBA, Finance and Marketing, Prestige Institute of Management
+          and Research, Gwalior, 2023–2025
+        </li>
+
+        <li>
+          B.Sc. Hotel Management, Jiwaji University, Gwalior,
+          2018–2021
+        </li>
+
+      </ul>
+
+    </div>
+
   </div>
+
 </section>
+
 </main>
 
+
+<!-- ==================== -->
+<!-- CONTACT -->
+<!-- ==================== -->
+
 <footer class="row">
-  <div class="side">Last updated November 2026</div>
-  <div class="body"><p>Open to data analyst, business analyst and operations analyst roles, and to relocating. <a href="mailto:pulkitchauhan.ank@gmail.com">pulkitchauhan.ank@gmail.com</a></p></div>
+
+  <div class="side">
+    Contact
+  </div>
+
+  <div class="body">
+
+    <p>
+      I'm currently open to data analyst, operations analyst, MIS and
+      business analyst opportunities, including roles outside Ahmedabad.
+    </p>
+
+    <p>
+
+      <a href="mailto:pulkitchauhan.ank@gmail.com">
+        pulkitchauhan.ank@gmail.com
+      </a>
+
+    </p>
+
+  </div>
+
 </footer>
 
 </div>
+
 </body>
 </html>
