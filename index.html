@@ -1,297 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pulkit Chauhan, data analyst</title>
-<meta name="description" content="Data analyst in Ahmedabad. SQL, Python, Power BI and Tableau projects on sales, suppliers, inventory, marketing and HR data.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b5d73'/%3E%3Ctext x='50' y='72' font-size='64' font-family='Georgia,serif' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Data analyst in Ahmedabad. SQL, Python, Power BI and Tableau projects on suppliers, sales, inventory, marketing and HR data.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff;--ink:#1d2733;--mute:#566170;--rule:#d5dae0;--link:#0b5d73;--tint:#f2f5f7}
+:root{--paper:#fdfdfd;--ink:#172033;--muted:#55607a;--rule:#d5d9e2;--flag:#b3261e}
+@media (prefers-color-scheme:dark){:root{--paper:#12151c;--ink:#e8eaf0;--muted:#98a1b5;--rule:#2a3040;--flag:#ff8a80}}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Source Sans 3",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-html{scroll-behavior:smooth}
-.wrap,main{max-width:960px;margin:0 auto;padding:0 28px}
-main{padding-bottom:48px}
-.top{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--rule)}
-.bar{display:flex;justify-content:space-between;align-items:center;height:56px}
-.brand{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.1rem;color:var(--ink);text-decoration:none}
-.bar nav a{margin-left:24px;color:var(--ink);text-decoration:none;font-size:.95rem}
-.bar nav a:hover{color:var(--link);text-decoration:underline}
-.hero{background:var(--tint);border-bottom:1px solid var(--rule);padding:64px 0 56px}
-.btn{display:inline-block;background:var(--link);color:#fff;padding:10px 22px;border-radius:4px;text-decoration:none;font-weight:600;margin-right:24px}
-.btn:hover{background:#06404f;color:#fff}
-.sec{display:grid;grid-template-columns:190px 1fr;column-gap:40px;padding:40px 0 48px;border-top:1px solid var(--rule);scroll-margin-top:56px}
-main>.sec:first-child{border-top:0}
-.sec>h2{grid-column:1;grid-row:1/span 12;align-self:start}
-.sec>*:not(h2){grid-column:2}
-a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px;transition:text-decoration-thickness .15s}
-a:hover{color:#06404f;text-decoration-thickness:2px}
-a:focus-visible,button:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
-h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;line-height:1.2;margin:0}
-h1{font-size:2.9rem;font-weight:600;letter-spacing:-.01em}
-h2{font-size:1.3rem;font-weight:600;margin:0}
-h3{font-size:1.1rem;font-weight:600}
-p{margin:0 0 14px}
-.intro{margin-top:18px;font-size:1.15rem;max-width:640px}
-.contact{margin:28px 0 0;color:var(--mute)}
-.contact a{margin-right:18px}
-.rise{opacity:0;transform:translateY(10px);animation:rise .6s ease-out forwards}
-@keyframes rise{to{opacity:1;transform:none}}
-.filters{margin:10px 0 0;color:var(--mute);font-size:.95rem}
-.filters span{margin-right:12px}
-.chip,.toggle{font:inherit;background:none;border:0;padding:0;color:var(--link);cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
-.chip{margin-right:14px}
-.chip:hover,.toggle:hover{text-decoration-thickness:2px}
-.chip[aria-pressed="true"]{color:var(--ink);font-weight:600;text-decoration-thickness:2px}
-.count{margin:6px 0 0;color:var(--mute);font-size:.9rem}
-.toggle{font-size:.95rem}
-.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
-.more.open{grid-template-rows:1fr}
-.more>div{overflow:hidden;min-height:0}
-.more p{margin:10px 0 0;color:var(--mute)}
-.enter{animation:fade .3s ease-out}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-.job{display:grid;grid-template-columns:170px 1fr;gap:6px 28px;padding:22px 0;border-bottom:1px solid var(--rule)}
-.job:last-of-type{border-bottom:0}
-.when{color:var(--mute);font-size:.95rem;padding-top:2px}
-.job h3+p{color:var(--mute);margin:2px 0 12px}
-.job p:last-child{margin-bottom:0}
-table{width:100%;border-collapse:collapse;margin-top:6px}
-th{text-align:left;font-weight:600;font-size:.95rem;color:var(--mute);padding:10px 14px 10px 0;border-bottom:1px solid var(--ink)}
-td{vertical-align:top;padding:16px 14px 16px 0;border-bottom:1px solid var(--rule)}
-td p{margin-bottom:8px}
-tbody tr:hover{background:var(--tint)}
-th:first-child,td:first-child{padding-left:10px}
-td:first-child{width:27%;font-weight:600}
-td:last-child{width:22%;color:var(--mute);font-size:.95rem;padding-right:0}
-.skills dt{font-weight:600;margin-top:18px}
-.skills dd{margin:2px 0 0}
-.edu{list-style:none;padding:0;margin:14px 0 0}
-.edu li{display:grid;grid-template-columns:170px 1fr;gap:4px 28px;padding:7px 0}
-.edu span{color:var(--mute);font-size:.95rem;padding-top:2px}
-footer{max-width:960px;margin:0 auto;padding:20px 28px 48px;border-top:1px solid var(--rule);color:var(--mute);font-size:.9rem}
-@media (max-width:640px){
-body{font-size:17px}
-.hero{padding:40px 0 36px}
-.sec{display:block;padding:32px 0 36px}
-.sec>h2{margin-bottom:12px}
-.bar nav{display:none}
-h1{font-size:2.2rem}
-.job,.edu li{grid-template-columns:1fr}
-.when,.edu span{order:-1}
-table,tbody,tr,td{display:block}
-thead{position:absolute;left:-9999px}
-tr{padding:16px 0;border-bottom:1px solid var(--rule)}
-td,td:first-child,td:last-child{width:auto;padding:0;border:0}
-td+td{margin-top:4px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 Literata,Georgia,serif;font-variant-numeric:lining-nums tabular-nums}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.page{max-width:56rem;margin:0 auto;padding:4rem 1.5rem 5rem}
+.row{display:grid;grid-template-columns:11rem minmax(0,1fr);column-gap:2rem;padding:1.5rem 0;border-top:1px solid var(--rule)}
+.row.first{border-top:0;padding-top:0}
+.head{padding-bottom:0}
+.head+.row{border-top:0;padding-top:.25rem}
+.side{color:var(--muted);font-size:.9rem;line-height:1.5;padding-top:.3rem}
+.body{max-width:38rem}
+.body>*:first-child{margin-top:0}
+h1{font-size:2.75rem;font-weight:600;line-height:1.1;letter-spacing:-.015em;margin:0 0 1.25rem}
+h2{font-size:.9rem;font-weight:400;color:var(--muted);margin:0}
+h3{font-size:1.15rem;font-weight:600;line-height:1.3;margin:0 0 .5rem}
+p{margin:.6rem 0}
+.flag{color:var(--flag);font-weight:600}
+.minor h3{font-size:1rem}
+.minor p{font-size:.98rem}
+.intro{font-size:1.2rem;line-height:1.55}
+.contact{margin-top:1.25rem}
+.contact a{margin-right:1.25rem}
+img{max-width:100%;height:auto}
+ul{margin:0;padding:0;list-style:none}
+li{margin:0 0 .5rem}
+@media (max-width:40rem){
+  .page{padding-top:2.5rem}
+  .row{grid-template-columns:1fr}
+  .side{padding:0 0 .5rem}
+  h1{font-size:2.2rem}
 }
-@media (prefers-reduced-motion:reduce){
-.rise{opacity:1;transform:none;animation:none}
-html{scroll-behavior:auto}
-.enter{animation:none}
-.more,a{transition:none}
-}
-@media print{a{color:inherit}h2{break-after:avoid}tr,.job{break-inside:avoid}}
 </style>
 </head>
 <body>
-<div id="root"></div>
-<noscript>
+<div class="page">
+
+<header class="row first">
+  <div class="side">Ahmedabad<br>Open to relocating</div>
+  <div class="body">
+    <h1>Pulkit Chauhan</h1>
+    <p class="intro">I'm a data analyst. I work with SQL, Python, Power BI and Tableau. Since September 2025 I've run purchasing at Acrifab and built the supplier, spend and inventory reports from Zoho data. I'm looking for data analyst, business analyst and operations analyst roles.</p>
+    <p class="contact"><a href="mailto:pulkitchauhan.ank@gmail.com">pulkitchauhan.ank@gmail.com</a><a href="https://linkedin.com/in/pulkit-data">LinkedIn</a><a href="https://github.com/pulkit-data">GitHub</a></p>
+  </div>
+</header>
+
 <main>
-<h1>Pulkit Chauhan</h1>
-<p>Data analyst based in Ahmedabad. This page needs JavaScript to show my projects and work history. You can reach me at <a href="mailto:pulkitchauhan.ank@gmail.com">pulkitchauhan.ank@gmail.com</a>, or see my code on <a href="https://github.com/pulkit-data">GitHub</a> and <a href="https://linkedin.com/in/pulkit-data">LinkedIn</a>.</p>
+<section aria-labelledby="projects">
+  <div class="row head"><div class="side"><h2 id="projects">Projects</h2></div></div>
+
+  <article class="row">
+    <div class="side">SQL, Python, Tableau</div>
+    <div class="body">
+      <h3><a href="https://github.com/pulkit-data/Supplier-Delivery-Fulfilment-Performance">Supplier delivery and fulfilment</a></h3>
+      <!-- Dashboard screenshot goes here: <img src="img/supplier-dashboard.png" alt="Tableau dashboard ranking five suppliers" width="680"> -->
+      <p>I scored 5 suppliers across 777 purchase orders on defect rate, compliance, delivery time and fulfilment. <span class="flag">Delta_Logistics was the riskiest, with a 10.8% defect rate and 61% compliance.</span> Alpha_Inc and Epsilon_Group were the most reliable.</p>
+      <p>I recommended shifting volume and putting a corrective plan in place, and built a Tableau dashboard that ranks the suppliers.</p>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="side">SQL, Python, Power BI</div>
+    <div class="body">
+      <h3><a href="https://github.com/pulkit-data/HR-Employee-Attrition-Analysis">HR employee attrition</a></h3>
+      <!-- Dashboard screenshot goes here -->
+      <p>Overall attrition was 16.12% and nearly 40% for sales representatives. Overtime, lower pay, young age and short tenure were the main drivers.</p>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="side">SQL, Python, Power BI</div>
+    <div class="body">
+      <h3><a href="https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI">E-commerce sales</a></h3>
+      <!-- Dashboard screenshot goes here -->
+      <p>138,000+ transactions from a public dataset. The South region and the Consumer segment brought in the most revenue, the Mobile App was the top channel, and heavy discounts cut into margin.</p>
+      <p>I recommended tighter discounts to protect margin and more investment in the Mobile App and Organic Search channels, which led revenue. I built the dashboard in Power BI.</p>
+    </div>
+  </article>
+
+  <article class="row minor">
+    <div class="side">Python, PostgreSQL, Power BI</div>
+    <div class="body">
+      <h3><a href="https://github.com/pulkit-data/sales-intelligence-pipeline">Sales intelligence pipeline</a></h3>
+      <p>Python prepares the sales data, PostgreSQL stores it and Power BI reports on it.</p>
+    </div>
+  </article>
+
+  <article class="row minor">
+    <div class="side">Python, Pandas, Matplotlib, Seaborn</div>
+    <div class="body">
+      <h3><a href="https://github.com/pulkit-data/Inventory-Demand-Analysis">Inventory and demand</a></h3>
+      <p>I cleaned multi-store inventory data (duplicates, missing values, negative quantities, wrong dates) and compared stockout and overstock risk by item. I flagged high-demand items running low and slow movers sitting overstocked, and recommended reorder points and clearance for the slow movers.</p>
+    </div>
+  </article>
+
+  <article class="row minor">
+    <div class="side">SQL, Python, Tableau</div>
+    <div class="body">
+      <h3><a href="https://github.com/pulkit-data/Marketing-Campaign-Performance-Analysis">Marketing campaigns</a></h3>
+      <p>High spenders responded at more than twice the rate of low spenders. Customers aged 18 to 30 responded most, and wine was the top category.</p>
+    </div>
+  </article>
+</section>
+
+<section aria-labelledby="work">
+  <div class="row head"><div class="side"><h2 id="work">Work</h2></div></div>
+
+  <article class="row">
+    <div class="side">Sep 2025 to present<br>Ahmedabad</div>
+    <div class="body">
+      <h3>Procurement analyst, Acrifab Pvt. Ltd.</h3>
+      <p>I build the reports behind purchasing decisions: inventory ageing, expiry exposure (30, 60 and 90 days) and category spend, in Excel and Power BI from Zoho exports. I also built a supplier tracker for on-time delivery, lead-time variance and rejection rate.</p>
+      <p>I set reorder points and safety stock for each SKU from consumption history, to cut stockouts and overstock, and I compare negotiated against invoiced prices to report savings.</p>
+      <p>The job itself is purchasing: 20 to 40 purchase orders a month across about 10 vendors, around 200 cartridge units, plus 5 to 8 GST invoices and challans a day in Zoho.</p>
+    </div>
+  </article>
+
+  <article class="row">
+    <div class="side">Oct 2024 to Jun 2025<br>Ahmedabad</div>
+    <div class="body">
+      <h3>Senior sales executive, Bluestone Jewellery &amp; Lifestyle</h3>
+      <p>I grew store revenue 15% by going through customer and sales trends in Excel and putting effort into the segments with the most room to grow. I also built KPI dashboards for sales, inventory and team performance, which cut manual reporting by more than 3 hours a week.</p>
+    </div>
+  </article>
+</section>
+
+<section aria-labelledby="skills">
+  <div class="row">
+    <div class="side"><h2 id="skills">Skills</h2></div>
+    <div class="body">
+      <p>PostgreSQL (joins, CTEs, window functions), Python (Pandas, NumPy, Matplotlib, Seaborn, SQLAlchemy), Excel (Power Query, pivot tables, XLOOKUP, INDEX-MATCH), Power BI (DAX), Tableau.</p>
+      <p>Procure-to-pay (PR, PO, GRN, invoice), vendor negotiation and scorecards, FIFO and lot-expiry control, reorder points and safety stock, GST and HSN, Zoho Inventory and Books.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="education">
+  <div class="row">
+    <div class="side"><h2 id="education">Education</h2></div>
+    <div class="body">
+      <ul>
+        <li>Data analytics program, Coding Ninjas with IIT Guwahati, 2025 to 2026</li>
+        <li>MBA in Finance and Marketing, Prestige Institute of Management and Research, Gwalior, 2023 to 2025</li>
+        <li>B.Sc. Hotel Management, Jiwaji University, Gwalior, 2018 to 2021</li>
+      </ul>
+    </div>
+  </div>
+</section>
 </main>
-</noscript>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
-<script>
-const { useState } = React;
-const h = React.createElement;
 
-const projects = [
-  {
-    id: "pipeline",
-    name: "Sales intelligence pipeline",
-    url: "https://github.com/pulkit-data/sales-intelligence-pipeline",
-    found: "Python prepares the sales data, PostgreSQL stores it and Power BI reports on it.",
-    tools: "Python, PostgreSQL, Power BI",
-    tags: ["SQL", "Python", "Power BI"]
-  },
-  {
-    id: "ecommerce",
-    name: "E-commerce sales",
-    url: "https://github.com/pulkit-data/Ecommerce-Sales-Analysis-SQL-Python-PowerBI",
-    found: "138,000+ transactions from a public dataset. The South region and the Consumer segment brought in the most revenue, the Mobile App was the top channel, and heavy discounts cut into margin.",
-    more: "I recommended tighter discounts to protect margin and more investment in the Mobile App and Organic Search channels, which led revenue. I built the dashboard in Power BI.",
-    tools: "SQL, Python, Power BI",
-    tags: ["SQL", "Python", "Power BI"]
-  },
-  {
-    id: "supplier",
-    name: "Supplier delivery and fulfilment",
-    url: "https://github.com/pulkit-data/Supplier-Delivery-Fulfilment-Performance",
-    found: "I scored 5 suppliers across 777 purchase orders on defect rate, compliance, delivery time and fulfilment. Delta_Logistics was the riskiest, with a 10.8% defect rate and 61% compliance. Alpha_Inc and Epsilon_Group were the most reliable.",
-    more: "I recommended shifting volume and putting a corrective plan in place, and built a Tableau dashboard that ranks the suppliers.",
-    tools: "SQL, Python, Tableau",
-    tags: ["SQL", "Python", "Tableau"]
-  },
-  {
-    id: "inventory",
-    name: "Inventory and demand",
-    url: "https://github.com/pulkit-data/Inventory-Demand-Analysis",
-    found: "I cleaned multi-store inventory data (duplicates, missing values, negative quantities, wrong dates) and compared stockout and overstock risk by item. 89% of records were at healthy stock. I flagged high-demand items running low and slow movers sitting overstocked.",
-    more: "I recommended reorder points and clearance for the slow movers, and built the dashboard in Matplotlib and Seaborn.",
-    tools: "Python, Pandas, Matplotlib, Seaborn",
-    tags: ["Python"]
-  },
-  {
-    id: "hr",
-    name: "HR employee attrition",
-    url: "https://github.com/pulkit-data/HR-Employee-Attrition-Analysis",
-    found: "Overall attrition was 16.12% and nearly 40% for sales representatives. Overtime, lower pay, young age and short tenure were the main drivers.",
-    tools: "SQL, Python, Power BI",
-    tags: ["SQL", "Python", "Power BI"]
-  },
-  {
-    id: "marketing",
-    name: "Marketing campaigns",
-    url: "https://github.com/pulkit-data/Marketing-Campaign-Performance-Analysis",
-    found: "High spenders responded at more than twice the rate of low spenders. Customers aged 18 to 30 responded most, and wine was the top category.",
-    tools: "SQL, Python, Tableau",
-    tags: ["SQL", "Python", "Tableau"]
-  }
-];
+<footer class="row">
+  <div class="side">Last updated November 2026</div>
+  <div class="body"><p>Open to data analyst, business analyst and operations analyst roles, and to relocating. <a href="mailto:pulkitchauhan.ank@gmail.com">pulkitchauhan.ank@gmail.com</a></p></div>
+</footer>
 
-const filters = [null, "SQL", "Python", "Power BI", "Tableau"];
-
-const jobs = [
-  {
-    when: "Sep 2025 to present",
-    title: "Procurement analyst, Acrifab Pvt. Ltd.",
-    place: "Ahmedabad",
-    body: [
-      "I build the reports behind purchasing decisions: inventory ageing, expiry exposure (30, 60 and 90 days) and category spend, in Excel and Power BI from Zoho exports. I also built a supplier tracker for on-time delivery, lead-time variance and rejection rate.",
-      "I set reorder points and safety stock for each SKU from consumption history, to cut stockouts and overstock, and I compare negotiated against invoiced prices to report savings.",
-      "The job itself is purchasing: 20 to 40 purchase orders a month across about 10 vendors, around 200 cartridge units, plus 5 to 8 GST invoices and challans a day in Zoho."
-    ]
-  },
-  {
-    when: "Oct 2024 to Jun 2025",
-    title: "Senior sales executive, Bluestone Jewellery & Lifestyle",
-    place: "Ahmedabad",
-    body: [
-      "I grew store revenue 15% by going through customer and sales trends in Excel and putting effort into the segments with the most room to grow. I also built KPI dashboards for sales, inventory and team performance, which cut manual reporting by more than 3 hours a week."
-    ]
-  }
-];
-
-const skills = [
-  ["Data", "PostgreSQL (joins, CTEs, window functions), Python (Pandas, NumPy, Matplotlib, Seaborn, SQLAlchemy), Excel (Power Query, pivot tables, XLOOKUP, INDEX-MATCH), Power BI (DAX), Tableau."],
-  ["Procurement and inventory", "Procure-to-pay (PR, PO, GRN, invoice), vendor negotiation and scorecards, FIFO and lot-expiry control, reorder points and safety stock, GST and HSN, Zoho Inventory and Books."]
-];
-
-const education = [
-  ["2023 to 2025", "MBA in Finance and Marketing, Prestige Institute of Management and Research, Gwalior"],
-  ["2025 to 2026", "Data analytics program, Coding Ninjas with IIT Guwahati"],
-  ["2018 to 2021", "B.Sc. Hotel Management, Jiwaji University, Gwalior"]
-];
-
-function Header() {
-  const delay = (n) => ({ animationDelay: n * 90 + "ms" });
-  return h("header", null,
-    h("h1", { className: "rise", style: delay(0) }, "Pulkit Chauhan"),
-    h("p", { className: "intro rise", style: delay(1) },
-      "I'm a data analyst based in Ahmedabad. I work with SQL, Python, Power BI and Tableau. Since September 2025 I've also been at Acrifab, where I run purchasing and build the supplier, spend and inventory reports from Zoho data. I'm looking for data analyst and business analyst roles, and I'm open to relocating."),
-    h("p", { className: "contact rise", style: delay(2) },
-      h("a", { className: "btn", href: "mailto:pulkitchauhan.ank@gmail.com" }, "Email me"),
-      h("a", { href: "https://linkedin.com/in/pulkit-data" }, "LinkedIn"),
-      h("a", { href: "https://github.com/pulkit-data" }, "GitHub")));
-}
-
-function ProjectRow({ p, animate }) {
-  const [open, setOpen] = useState(false);
-  const panel = "more-" + p.id;
-  return h("tr", { className: animate ? "enter" : undefined },
-    h("td", null, h("a", { href: p.url }, p.name)),
-    h("td", null,
-      h("p", null, p.found),
-      p.more && h("button", { className: "toggle", "aria-expanded": open, "aria-controls": panel, onClick: () => setOpen(!open) }, open ? "Hide details" : "Details"),
-      p.more && h("div", { id: panel, className: "more" + (open ? " open" : ""), "aria-hidden": !open },
-        h("div", null, h("p", null, p.more)))),
-    h("td", null, p.tools));
-}
-
-function Projects() {
-  const [tool, setTool] = useState(null);
-  const [touched, setTouched] = useState(false);
-  const shown = tool ? projects.filter((p) => p.tags.includes(tool)) : projects;
-  const pick = (t) => { setTool(t); setTouched(true); };
-  return h("section", { id: "projects", className: "sec" },
-    h("h2", null, "Projects"),
-    h("div", { className: "filters", role: "group", "aria-label": "Filter projects by tool" },
-      h("span", null, "Projects that use:"),
-      filters.map((t) => h("button", { key: t || "all", className: "chip", "aria-pressed": tool === t, onClick: () => pick(t) }, t || "any tool"))),
-    h("p", { className: "count", "aria-live": "polite" }, "Showing " + shown.length + " of " + projects.length),
-    h("table", null,
-      h("thead", null, h("tr", null, h("th", null, "Project"), h("th", null, "What I found"), h("th", null, "Tools"))),
-      h("tbody", null, shown.map((p) => h(ProjectRow, { key: p.id, p, animate: touched })))));
-}
-
-function Work() {
-  return h("section", { id: "work", className: "sec" },
-    h("h2", null, "Work"),
-    jobs.map((j) => h("div", { className: "job", key: j.title },
-      h("div", { className: "when" }, j.when),
-      h("div", null,
-        h("h3", null, j.title),
-        h("p", null, j.place),
-        j.body.map((t, i) => h("p", { key: i }, t))))));
-}
-
-function Skills() {
-  return h("section", { id: "skills", className: "sec" },
-    h("h2", null, "Skills"),
-    h("dl", { className: "skills" }, skills.map(([k, v]) => [h("dt", { key: k + "t" }, k), h("dd", { key: k + "d" }, v)])));
-}
-
-function Education() {
-  return h("section", { id: "education", className: "sec" },
-    h("h2", null, "Education"),
-    h("ul", { className: "edu" }, education.map(([when, what]) => h("li", { key: what }, h("span", null, when), h("div", null, what)))));
-}
-
-function Nav() {
-  const links = ["projects", "work", "skills", "education", "contact"];
-  return h("div", { className: "top" },
-    h("div", { className: "wrap bar" },
-      h("a", { className: "brand", href: "#root" }, "Pulkit Chauhan"),
-      h("nav", { "aria-label": "Sections" }, links.map((l) => h("a", { key: l, href: "#" + l }, l[0].toUpperCase() + l.slice(1))))));
-}
-
-function Contact() {
-  return h("section", { id: "contact", className: "sec" },
-    h("h2", null, "Contact"),
-    h("p", null, "I'm open to data analyst and business analyst roles, and to relocating."),
-    h("p", null,
-      h("a", { href: "mailto:pulkitchauhan.ank@gmail.com" }, "pulkitchauhan.ank@gmail.com"), ", ",
-      h("a", { href: "https://www.linkedin.com/in/pulkit-chauhan-data" }, "LinkedIn"), " or ",
-      h("a", { href: "https://github.com/pulkit-data" }, "GitHub"), "."));
-}
-
-function App() {
-  return h(React.Fragment, null,
-    h(Nav),
-    h("div", { className: "hero" }, h("div", { className: "wrap" }, h(Header))),
-    h("main", null, h(Projects), h(Work), h(Skills), h(Education), h(Contact)),
-    h("footer", null, "Last updated November 2026."));
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(h(App));
-</script>
+</div>
 </body>
 </html>
